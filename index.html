@@ -1,4 +1,4 @@
-<html id="v19">
+<html id="v19" lang="zh">
  <head> 
  </head> 
  <body id="v16" style="background-color: #808080;"> 
@@ -7,8 +7,12 @@
   <script src="js/jq.js"></script> 
   <h1 id="v2">你好，运行此网站请开VPN，不开一些子网页无法打开</h1> 
   <p id="v3">欢迎回来</p> 
-  <table id="v4"> 
-  </table> 
+  <div id="great-person-of-the-day">
+   
+  </div> 
+  <meta id="v29" charset="UTF - 8"> 
+  <title id="v30">用户进入网站时长计时</title> 
+  <p id="v31">您已经在本网站停留了: <span id="timer">0秒</span></p> 
   <p id="v5">想要玩一会游戏吗?</p> 
   <iframe id="v21" src="https://www.4399.com" width="300" height="400"></iframe> 
   <p id="v7">想看一会电视吗?</p> 
@@ -21,27 +25,56 @@
   <iframe id="v21" src="https://cybermap.kaspersky.com/" width="300" height="400"></iframe> 
   <p id="v5">万能查</p> 
   <iframe id="v21" src="https://www.bmcx.com/" width="300" height="400"></iframe> 
-    <p id="v5">在线查q绑</p> 
-      <iframe id="v21" src="https://www.4399.c" width="300" height="400"></iframe> 
-
+  <p id="v5">在线查q绑</p> 
+  <iframe id="v21" src="https://www.4399.c" width="300" height="400"></iframe> 
   <p id="v12">注:后面会更新</p> 
   <p id="v13">如果有人装b请联系站长qq3545613914</p> 
   <a id="v14" href="https://qm.qq.com/cgi-bin/qm/qr?k=xxxxxxxxxxxxxxxxx&amp;jump_from=webapi&amp;authKey=xxxxxxxxxxxxxxxxxxxxxxxxx&amp;noverify=0&amp;uin=3545613914">跳转到我的QQ名片</a> 
   <a id="v15" href="https://qm.qq.com/cgi-bin/qm/qr?k=xxxxxxxxx&amp;jump_from=webapi&amp;noverify=0&amp;group_code=280319657">点击跳转QQ群<p id="v19"> </p></a> 
-  <!DOCTYPE html>
-<html lang="zh">
-<head>
-<!DOCTYPE html>
-<html>
+  <meta id="v27" charset="UTF-8"> 
+  <title id="v28">网站发布时长 - 每秒更新</title> 
+  <div id="time - display">
+   网站已陪伴了我们 11 天，2 小时，3 分钟，23 秒。
+  </div> 
+  <h3 id="v32">站长已经活了多久?</h3> 
+  <div id="result">
+   站长已经活了 460509683 秒，相当于 7675161 分钟，相当于 127919 小时，相当于 5329 天，相当于 14 年
+  </div> 
+  <span id="visBox" style="display: block; left: 9px; top: 9px;"> <span id="tagName">body</span> <span id="tagId">#v16</span> <span id="tagClasses"></span> (<span id="tagWH">344*3745</span>) </span> 
+  <span id="visCover" style="top: 8px; width: 344px; height: 3745.21px; left: 8px;"></span> 
+  <table id="v4"> 
+   <script>
+        // 定义伟人名字的数组
+        const greatPersons = ["拿破仑", "爱因斯坦", "甘地","希特勒","马宇文","科比布莱恩特","俾斯麦","特斯拉","牛顿","达尔文","穆罕默德","耶稣","孔子","莎士比亚","达芬奇","莫扎特","爱迪生","亚历山大贝尔","华盛顿","苏格拉底","柏拉图"];
 
-<head>
-    <meta charset="UTF-8">
-    <title>网站发布时长 - 每秒更新</title>
-</head>
+        function updateGreatPerson() {
+            const randomIndex = Math.floor(Math.random() * greatPersons.length);
+            const greatPerson = greatPersons[randomIndex];
 
-<body>
-    <div id="time - display"></div>
-    <script>
+            document.getElementById('great-person-of-the-day').textContent = `今日世界伟人是: ${greatPerson}`;
+        }
+
+        // 在页面加载时显示第一个伟人
+        updateGreatPerson();
+
+        // 每天更新一次伟人信息（这里只是简单设置，实际可能需要更精确的时间设置）
+        setInterval(updateGreatPerson, 24 * 60 * 60 * 1000);
+    </script> 
+   <script>
+    // 记录进入页面的时间
+    const startTime = new Date();
+
+    function updateTimer() {
+      const currentTime = new Date();
+      const diff = currentTime - startTime;
+      const seconds = Math.floor(diff / 1000);
+      document.getElementById('timer').innerHTML = seconds + "秒";
+    }
+
+    // 每秒更新一次时间
+    setInterval(updateTimer, 1000);
+  </script> 
+   <script>
         
         const publishDate = new Date('2024-11-12T22:53:00');
 
@@ -61,17 +94,41 @@
             const timeDisplay = document.getElementById('time - display');
             timeDisplay.textContent = `网站已陪伴了我们 ${days} 天，${hours} 小时，${minutes} 分钟，${finalSeconds} 秒。`;
         }
+      
 
         
         updateTime();
         
         setInterval(updateTime, 1000);
-    </script>
-</body>
+    </script> 
+   <script>
+        
+        const birthDate = new Date(2010, 3, 22, 1, 35);
 
-</html>
+        function calculateTimeLived() {
+            const now = new Date();
+            const diff = now - birthDate;
+
+            const seconds = Math.floor(diff / 1000);
+            const minutes = Math.floor(seconds / 60);
+            const hours = Math.floor(minutes / 60);
+            const days = Math.floor(hours / 24);
+            const years = Math.floor(days / 365);
+
+            document.getElementById('result').innerHTML = `站长已经活了 ${seconds} 秒，相当于 ${minutes} 分钟，相当于 ${hours} 小时，相当于 ${days} 天，相当于 ${years} 年`;
+        }
+
+        calculateTimeLived();
+    </script> 
+  </table>  
  </body>
 </html>
+
+
+
+
+
+
 
 
 
