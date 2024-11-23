@@ -16,21 +16,65 @@
   <p id="v5">正版steam网站</p> 
   <iframe id="v21" src="http://www.steampowered.com.br/" width="300" height="400"></iframe> 
   <p id="v10">开源项目</p> 
-  <iframe id="v26" src="https://github.com/mayuwen123/aa" width="300" height="400"></iframe> 
+  <iframe id="v26" src="https:github.com/mayuwen123/aa/edit/main/index.html" width="300" height="400"></iframe> 
   <p id="v5">实时网络威胁地图</p> 
   <iframe id="v21" src="https://cybermap.kaspersky.com/" width="300" height="400"></iframe> 
   <p id="v5">万能查</p> 
   <iframe id="v21" src="https://www.bmcx.com/" width="300" height="400"></iframe> 
     <p id="v5">在线查q绑</p> 
-      <iframe id="v21" src="https://dk.xovc.cn/" width="300" height="400"></iframe> 
+      <iframe id="v21" src="https://www.4399.c" width="300" height="400"></iframe> 
 
   <p id="v12">注:后面会更新</p> 
   <p id="v13">如果有人装b请联系站长qq3545613914</p> 
   <a id="v14" href="https://qm.qq.com/cgi-bin/qm/qr?k=xxxxxxxxxxxxxxxxx&amp;jump_from=webapi&amp;authKey=xxxxxxxxxxxxxxxxxxxxxxxxx&amp;noverify=0&amp;uin=3545613914">跳转到我的QQ名片</a> 
   <a id="v15" href="https://qm.qq.com/cgi-bin/qm/qr?k=xxxxxxxxx&amp;jump_from=webapi&amp;noverify=0&amp;group_code=280319657">点击跳转QQ群<p id="v19"> </p></a> 
-  
+  <!DOCTYPE html>
+<html lang="zh">
+<head>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>网站发布时长 - 每秒更新</title>
+</head>
+
+<body>
+    <div id="time - display"></div>
+    <script>
+        
+        const publishDate = new Date('2024-11-12T22:53:00');
+
+        function updateTime() {
+            const currentDate = new Date();
+            const diff = currentDate - publishDate;
+
+            const seconds = Math.floor(diff / 1000);
+
+            const days = Math.floor(seconds / (60 * 60 * 24));
+            const remainingSeconds = seconds % (60 * 60 * 24);
+            const hours = Math.floor(remainingSeconds / (60 * 60));
+            const remainingSecondsAfterHours = remainingSeconds % (60 * 60);
+            const minutes = Math.floor(remainingSecondsAfterHours / 60);
+            const finalSeconds = remainingSecondsAfterHours % 60;
+
+            const timeDisplay = document.getElementById('time - display');
+            timeDisplay.textContent = `网站已陪伴了我们 ${days} 天，${hours} 小时，${minutes} 分钟，${finalSeconds} 秒。`;
+        }
+
+        
+        updateTime();
+        
+        setInterval(updateTime, 1000);
+    </script>
+</body>
+
+</html>
  </body>
 </html>
+
+
+
 
 
 
